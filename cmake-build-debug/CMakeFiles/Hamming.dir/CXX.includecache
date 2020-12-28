@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jaykwok/Library/Mobile Documents/com~apple~CloudDocs/Projects/CPP Practice/Hamming-Code/Hamming.cpp
+Hamming.h
+/Users/jaykwok/Library/Mobile Documents/com~apple~CloudDocs/Projects/CPP Practice/Hamming-Code/Hamming.h
+
+/Users/jaykwok/Library/Mobile Documents/com~apple~CloudDocs/Projects/CPP Practice/Hamming-Code/Hamming.h
+iostream
+-
+vector
+-
+
+/Users/jaykwok/Library/Mobile Documents/com~apple~CloudDocs/Projects/CPP Practice/Hamming-Code/main.cpp
+Hamming.h
+/Users/jaykwok/Library/Mobile Documents/com~apple~CloudDocs/Projects/CPP Practice/Hamming-Code/Hamming.h
+
