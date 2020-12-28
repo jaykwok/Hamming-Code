@@ -3,6 +3,7 @@
 //
 
 #include "Hamming.h"
+
 //hamming encode 汉明码编码
 std::vector<int> Hamming::encode(std::vector<int> x) {
     //计算校验码长度
@@ -16,7 +17,7 @@ std::vector<int> Hamming::encode(std::vector<int> x) {
     int n = r + k;
 
     //汉明码编码:采用偶校验
-    std::vector<int> x_encoding(n,0);
+    std::vector<int> x_encoding(n, 0);
 
     //判断是否为底为2的幂整函数的值域内，即判断当前是否为插入校验码的位置
     auto is2n = [](int N) { if ((N & (N - 1)) == 0 && N > 0) return 1; else return 0; };
@@ -33,7 +34,7 @@ std::vector<int> Hamming::encode(std::vector<int> x) {
     }
 
     //确定校验码的值
-    std::vector<int> sum(r,0);//存放偶校验的相同位数字一样的数的和
+    std::vector<int> sum(r, 0);//存放偶校验的相同位数字一样的数的和
     int temp = 1;//用于确定相同数位的数字
     for (auto i = 0; i < r; i++) {
         for (j = 0; j < n; j++) {
@@ -56,7 +57,7 @@ std::vector<int> Hamming::encode(std::vector<int> x) {
 
 
 //hamming decode 汉明码解码
-std::vector<int> Hamming::decode(std::vector<int> x){
+std::vector<int> Hamming::decode(std::vector<int> x) {
     //汉明码解码
     int n = x.size();//编码长度
 
@@ -82,7 +83,7 @@ std::vector<int> Hamming::decode(std::vector<int> x){
     int k = n - r;
 
     //通过校验码纠错
-    std::vector<int> sum(r,0);//存放偶校验的相同位数字一样的数的和
+    std::vector<int> sum(r, 0);//存放偶校验的相同位数字一样的数的和
     int temp = 1;//用于确定相同数位的数字
     for (auto i = 0; i < r; i++) {
         for (auto j = 0; j < n; j++) {
@@ -116,7 +117,7 @@ std::vector<int> Hamming::decode(std::vector<int> x){
         x[pos - 1] ^= 1;
 
     //初始化信息码
-    std::vector<int>x_decoding(k,0);
+    std::vector<int> x_decoding(k, 0);
 
     //判断是否为底为2的幂整函数的值域内，即判断当前是否为插入校验码的位置
     auto is2n = [](int N) { if ((N & (N - 1)) == 0 && N > 0) return 1; else return 0; };

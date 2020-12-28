@@ -4,12 +4,14 @@
 
 #ifndef HAMMING_HAMMING_H
 #define HAMMING_HAMMING_H
+
 #include <iostream>
 #include <vector>
 
 class Hamming {
 public:
     std::vector<int> encode(std::vector<int> x);
+
     std::vector<int> decode(std::vector<int> x);
 };
 
