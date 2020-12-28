@@ -1,4 +1,4 @@
-# Hamming Code
+# Hamming Code For C++
 
 #### 汉明码编码/解码/Hamming Encode/Decode
 
