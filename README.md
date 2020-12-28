@@ -42,6 +42,13 @@ int main() {
     //Ending
     return 0;
 }
-
+//Raw Data is:
+//1010
+//Encoding Result is:
+//1011010
+//Wrong Encoding Result is:
+//0011010
+//Decoding Result is:
+//1010
 ```
 
